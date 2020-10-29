@@ -2,8 +2,6 @@ const express = require ("express"); //rotas
 const app = express();
 const handlebars = require ("express-handlebars"); // monta o html com handlebars
 const bodyParser = require ("body-parser"); //body parser pega os dados do form no html
-const Sequelize = require("sequelize"); //  conecta com o mysql
-
 
 
 //config handlebars
@@ -16,11 +14,7 @@ const Sequelize = require("sequelize"); //  conecta com o mysql
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 
-//conectando ao banco
-const sequelize = new Sequelize("cadastro", "root", "12345", {
-    host: "localhost",
-    dialect: "mysql"
-});
+
 
 
 //rotas
