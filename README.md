@@ -1,5 +1,5 @@
 
-<h1>Pequeno projeto em Node.js que exibe e exclui tabelas do MySQL;</h1>
+<h1>Pequeno projeto em Node.js e MySQL;</h1>
 
 
 
