@@ -12,4 +12,9 @@
 </ul>
 
 
+- [x] C
+- [x] R
+- [ ] U
+- [x] D
+
 <h4>Para testes é necessário implementar o banco de dados postapp</h4>
