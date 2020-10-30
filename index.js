@@ -43,6 +43,14 @@ app.post("/add", function(req,res){
     })
 })
 
+app.get("/deletar/:id", function(req,res){
+    Post.destroy({where: {"id": req.params.id}}).then(function(){
+        res.send("Postagem deletada")
+    }).catch(function(erro){
+        res.send("Essa postagem nao existe")
+    })
+})
+
 //ativando servidor
 app.listen(8081, function(){
     console.log("servidor rodando")
