@@ -19,10 +19,13 @@ app.use(bodyParser.json())
 
 //rotas
 
-
-
 app.get("/", function(req, res){
-    res.render("home")
+    //.all retorna os registros do banco de dados
+    //{order:[["id", "DESC"]]} ordena do mais novo para mais antigo
+    Post.findAll({order:[["id", "DESC"]]}).then(function(posts){
+        res.render("home", {posts: posts})
+    })
+    
 })
 
 app.get("/cad", function(req,res){
